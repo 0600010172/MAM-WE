@@ -164,11 +164,13 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 
 ---
 
-# ✅ RESULT
+# ✅ 目的
 
-- ✅ Mobile apps = **Read-only**
-- ❌ No copy / paste / save / download / print
-- ✅ Works on personal devices (no enrollment required)
-- ✅ Data stays inside protected apps
+- ✅ モバイルアプリは閲覧専用 = **Read-only**
+- ❌ No コピー / ペースト / 保存 / ダウンロード / 印刷
+- ✅ アプリ単位で会社データを管理・保護 → 端末全体は管理しません。
+- ✅ 個人アプリ、写真、個人データは会社から視認不可 → 会社側で操作・管理しません。
+- ✅ 端末紛失、盗難、退職時は、会社データのみ削除 → 個人データには影響しません。
+
 
 ---
