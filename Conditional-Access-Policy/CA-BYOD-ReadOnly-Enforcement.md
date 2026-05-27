@@ -43,12 +43,16 @@ This guide provides **minimal, step-numbered actions** to create a **Conditional
 3. Click **Conditional Access**
 4. Click **New policy**
 
+![Windows](Image/0.png)
+
 ---
 
 ## 🔹 2. Name
 
 5. Name →  
    `CA - BYOD Require APP`
+
+![Windows](Image/1.png)
 
 ---
 
@@ -59,12 +63,17 @@ This guide provides **minimal, step-numbered actions** to create a **Conditional
 8. Select → `BYOD-Test`
 9. Exclude → **Break-glass admin accounts**
 
+![Windows](Image/2.1.png)
+![Windows](Image/2.2.png)
+
 ---
 
 ## 🔹 4. Assignments — Cloud Apps
 
 10. Click **Cloud apps**
 11. Select → **Office 365**
+
+![Windows](Image/3.png)
 
 ---
 
@@ -75,6 +84,8 @@ This guide provides **minimal, step-numbered actions** to create a **Conditional
 14. Configure:
    - iOS → ✅
    - Android → ✅
+
+![Windows](Image/4.png)
 
 ---
 
