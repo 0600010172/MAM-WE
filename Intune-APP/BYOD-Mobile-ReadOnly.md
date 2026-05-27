@@ -6,6 +6,10 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 
 # 🧭 STEP 0 — Create Test Group
 
+<table>
+<tr>
+<td valign="top" style="padding-right: 90px;">
+   
 1. Go to **Entra admin center**
 2. Click **Groups**
 3. Click **New group**
@@ -13,6 +17,16 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 5. Name → `BYOD-Test`
 6. Add → **Test user**
 7. Click **Create**
+
+</td>
+
+<td valign="top">
+
+<img src="Image/0.png" width="700"><br><br>
+
+</td>
+</tr>
+</table>
 
 ---
 
