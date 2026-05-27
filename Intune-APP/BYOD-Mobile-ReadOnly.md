@@ -1,6 +1,6 @@
 # 📱 BYOD Mobile Read-Only Protection (Intune APP) — Setup Guide
 
-This guide provides **minimal, step-numbered actions** to configure **read-only access on personal mobile devices**.
+本ガイドは、**個人モバイル端末で閲覧専用アクセス**を設定するための手順
 
 ---
 
