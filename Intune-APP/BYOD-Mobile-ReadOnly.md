@@ -1,122 +1,117 @@
-# 📱 BYOD Mobile Read-Only Protection (Intune + CA) — Quick Setup Guide
+# 📱 BYOD Mobile Read-Only Protection (Intune APP) — Quick Setup Guide
 
-This guide provides **minimal, actionable steps** to configure **read-only access on personal mobile devices** using App Protection Policies.
+This guide provides **minimal, step-numbered actions** to configure **read-only access on personal mobile devices**.
 
 ---
 
 # 🧭 STEP 0 — Create Test Group
 
 1. Go to **Entra admin center**
-2. **Groups → New group**
-3. Type: **Security**
-4. Name: `BYOD-Test`
-5. Add test user
-6. Click **Create**
+2. Click **Groups**
+3. Click **New group**
+4. Group type → **Security**
+5. Name → `BYOD-Test`
+6. Add → **Test user**
+7. Click **Create**
 
 ---
 
 # 🧭 STEP 1 — Create App Protection Policy
 
-## 🔹 Navigation
-1. **Intune admin center**
-2. **Apps → Protection**
-3. Click **+ Create**
+### 🔹 1. Basics
+1. Go to **Intune admin center**
+2. Click **Apps**
+3. Click **Protection**
+4. Click **+ Create**
+5. Select platform (iOS / Android)
+6. Name → `APP - BYOD ReadOnly`
+7. Click **Next**
 
 ---
 
-## 🔹 Platform
-- Select:
-  - iOS/iPadOS OR Android
+### 🔹 2. Apps
+8. Click **Select apps**
+9. Add:
+   - Outlook
+   - Teams
+   - OneDrive
+   - SharePoint
+   - Office
+   - (Optional) Edge
+10. Click **Next**
 
 ---
 
-## 🔹 Basics
-- Name: `APP - BYOD ReadOnly`
-- Next
+### 🔹 3. Data Protection (READ-ONLY)
+
+11. Backup org data → **Block**  
+12. Send org data → **Policy managed apps**  
+13. Save copies → **Block**  
+14. Allow save to services → **None**  
+15. Receive data → **Policy managed apps**  
+16. Open data into org → **Allow**  
+17. Restrict copy/paste → **Blocked**  
+18. Cut/copy limit → **0**  
+19. Third-party keyboard → **Block**  
+
+#### Encryption
+20. Encrypt org data → **Require**
+
+#### Functionality
+21. Sync → **Block**  
+22. Printing → **Block**  
+23. Web transfer → **Policy managed apps**  
+24. Notifications → **Block**  
+25. Screen capture → **Block**  
+26. Click **Next**
 
 ---
 
-## 🔹 Apps
-- Add:
-  - Outlook
-  - Teams
-  - OneDrive
-  - SharePoint
-  - Office
-  - (Optional) Edge
-- Next
+### 🔹 4. Access Requirements
+
+27. PIN → **Require**  
+28. PIN type → **Numeric**  
+29. Simple PIN → **Block**  
+30. Minimum length → **6**  
+31. Biometrics → **Allow**  
+32. Override with PIN → **Require**  
+33. Timeout → **5–15 minutes**  
+34. App PIN when device PIN set → **Require**  
+35. Work account → **Require**  
+36. Click **Next**
 
 ---
 
-## 🔹 Data Protection (READ-ONLY SETTINGS)
+### 🔹 5. Conditional Launch
 
-- Backup org data → **Block**
-- Send org data → **Policy managed apps**
-- Save copies → **Block**
-- Allow save to services → **None**
-- Receive data → **Policy managed apps**
-- Open data into org → **Allow**
-- Restrict copy/paste → **Blocked**
-- Cut/copy limit → **0**
-- Third-party keyboard → **Block**
-
-### Encryption
-- Encrypt org data → **Require**
-
-### Functionality
-- Sync → **Block**
-- Printing → **Block**
-- Web transfer → **Policy managed apps**
-- Notifications → **Block**
-- Screen capture → **Block**
+37. Max PIN attempts → **5 → Reset PIN**  
+38. Offline (minutes) → **1440 → Block access**  
+39. Offline (days) → **90 → Wipe data**  
+40. Jailbroken/rooted → **Block access**  
+41. Min OS:
+   - iOS → **14.0**
+   - Android → **10.0**
+42. Action → **Block access**  
+43. Click **Next**
 
 ---
 
-## 🔹 Access Requirements
+### 🔹 6. Assignments
 
-- PIN → **Require**
-- PIN type → **Numeric**
-- Simple PIN → **Block**
-- Min length → **6**
-- Biometrics → **Allow**
-- Override with PIN → **Require**
-- Timeout → **5–15 min**
-- App PIN when device PIN set → **Require**
-- Work account → **Require**
+44. Click **Add groups (Included)**
+45. Select → `BYOD-Test`
 
----
+46. Click **Add groups (Excluded)**
+47. Select:
+   - Break-glass admin accounts
 
-## 🔹 Conditional Launch
-
-### App conditions
-- Max PIN attempts → **5 → Reset PIN**
-- Offline (minutes) → **1440 → Block**
-- Offline (days) → **90 → Wipe**
-
-### Device conditions
-- Jailbroken/rooted → **Block**
-
-### Additional
-- Min OS:
-  - iOS → **14.0**
-  - Android → **10.0**
-- Action → **Block access**
+48. Click **Next**
 
 ---
 
-## 🔹 Assignments
+### 🔹 7. Create
 
-### Included
-- Add group → `BYOD-Test`
-
-### Excluded
-- Add:
-  - Break-glass admin accounts
-
----
-
-## 🔹 Create
-- Click **Create**
+49. Click **Create**
 
 ---
 
