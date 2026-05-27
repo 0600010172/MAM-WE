@@ -1,13 +1,13 @@
 # 🔐 Conditional Access (CA) — BYOD Read-Only Enforcement Guide
 
-This guide provides **minimal, step-numbered actions** to create a **Conditional Access Policy (CAP)** that enforces **App Protection Policies (APP)** for personal mobile devices.
+このガイドでは、**個人所有モバイル端末**に対して **App Protection Policy（APP）**を強制するための **Conditional Access Policy（CAP）**作成手順
 
 ---
 
 # 🧭 WHY Conditional Access is REQUIRED
 
 ✅ **Purpose**
-- Ensures only **protected apps (with APP)** can access M365 data
+- APP が適用された**保護アプリのみ**、Microsoft 365 データへアクセス可能
 
 ---
 
@@ -96,6 +96,8 @@ This guide provides **minimal, step-numbered actions** to create a **Conditional
    - ✅ Mobile apps and desktop clients
    - ✅ Browser
 
+![Windows](Image/5.png)
+
 ---
 
 ## 🔹 7. Grant Controls
@@ -104,6 +106,8 @@ This guide provides **minimal, step-numbered actions** to create a **Conditional
 18. Select:
    - ✅ Require app protection policy
 
+![Windows](Image/6.png)
+
 ---
 
 ## 🔹 8. Enable Policy
@@ -111,13 +115,15 @@ This guide provides **minimal, step-numbered actions** to create a **Conditional
 19. Enable policy → **On**
 20. Click **Create**
 
+![Windows](Image/7.png)
+
 ---
 
 # ✅ RESULT
 
-- ✅ Only protected apps can access data
-- ❌ Unmanaged apps blocked
-- ❌ Direct browser/data download blocked (with SP config)
-- ✅ Required for full APP enforcement
+- ✅ 保護されたアプリのみデータアクセス可能
+- ❌ 管理対象外アプリはブロック
+- ❌ ブラウザ経由・直接ダウンロードは禁止（SharePoint設定含む）
+- ✅ APPポリシー完全適用に必要
 
 ---
