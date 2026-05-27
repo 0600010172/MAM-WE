@@ -4,7 +4,7 @@
 
 ---
 
-# 🧭 STEP 0 — Create Test Group
+# 🧩 STEP 0 — Create Test Group
 
 <table>
 <tr>
@@ -30,7 +30,7 @@
 
 ---
 
-# 🧭 — Create App Protection Policy
+# 🧩  Create App Protection Policy
 
 ### 🔹 STEP 1. Basics
 1. Go to **Intune admin center**
