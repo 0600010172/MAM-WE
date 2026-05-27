@@ -1,4 +1,4 @@
-# 📱 BYOD Mobile Read-Only Protection (Intune APP) — Quick Setup Guide
+# 📱 BYOD Mobile Read-Only Protection (Intune APP) — Setup Guide
 
 This guide provides **minimal, step-numbered actions** to configure **read-only access on personal mobile devices**.
 
@@ -30,9 +30,9 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 
 ---
 
-# 🧭 STEP 1 — Create App Protection Policy
+# 🧭 — Create App Protection Policy
 
-### 🔹 1. Basics
+### 🔹 STEP 1. Basics
 1. Go to **Intune admin center**
 2. Click **Apps**
 3. Click **Protection**
@@ -41,9 +41,12 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 6. Name → `APP - BYOD ReadOnly`
 7. Click **Next**
 
+![Windows](Image/1.png)
+![Linux](Image/2.png)
+
 ---
 
-### 🔹 2. Apps
+### 🔹 STEP 2. Apps
 8. Click **Select apps**
 9. Add:
    - Outlook
@@ -54,9 +57,12 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
    - (Optional) Edge
 10. Click **Next**
 
+![Windows](Image/3.png)
+![Linux](Image/4.png)
+
 ---
 
-### 🔹 3. Data Protection (READ-ONLY)
+### 🔹 STEP 3. Data Protection (READ-ONLY)
 
 11. Backup org data → **Block**  
 12. Send org data → **Policy managed apps**  
@@ -79,9 +85,14 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 25. Screen capture → **Block**  
 26. Click **Next**
 
+
+![Windows](Image/5.1.png)
+![Linux](Image/5.2.png)
+
+
 ---
 
-### 🔹 4. Access Requirements
+### 🔹 STEP 4. Access Requirements
 
 27. PIN → **Require**  
 28. PIN type → **Numeric**  
@@ -94,9 +105,11 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 35. Work account → **Require**  
 36. Click **Next**
 
+![Linux](Image/6.png)
+
 ---
 
-### 🔹 5. Conditional Launch
+### 🔹 STEP 5. Conditional Launch
 
 37. Max PIN attempts → **5 → Reset PIN**  
 38. Offline (minutes) → **1440 → Block access**  
@@ -108,9 +121,11 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 42. Action → **Block access**  
 43. Click **Next**
 
+![Linux](Image/7.png)
+
 ---
 
-### 🔹 6. Assignments
+### 🔹 STEP 6. Assignments
 
 44. Click **Add groups (Included)**
 45. Select → `BYOD-Test`
@@ -121,11 +136,31 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 
 48. Click **Next**
 
+![Linux](Image/8.png)
+
 ---
 
-### 🔹 7. Create
+### 🔹 STEP 7. Create
 
 49. Click **Create**
+
+<table>
+<tr>
+
+<td valign="top">
+<img src="Image/9.1.png" width="600"><br><br>
+</td>
+
+<td width="50"></td>
+
+<td valign="top">
+<img src="Image/9.2.png" width="600"><br><br>
+</td>
+
+</tr>
+</table>
+
+![Linux](Image/9.3.png)
 
 ---
 
