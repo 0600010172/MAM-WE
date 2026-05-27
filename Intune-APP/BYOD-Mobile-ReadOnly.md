@@ -8,7 +8,7 @@ This guide provides **minimal, step-numbered actions** to configure **read-only 
 
 <table>
 <tr>
-<td valign="top" style="padding-right: 90px;">
+<td valign="top" style="padding-right: 30px;">
    
 1. Go to **Entra admin center**
 2. Click **Groups**
